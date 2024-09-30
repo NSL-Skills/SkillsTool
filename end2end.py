@@ -416,7 +416,7 @@ def display_to_div(txt, targetDiv):
 # Purpose:  
 #
 def pullNewPosting():
-  url = "https://raw.githubusercontent.com/nsl-skills/nsl-skills.github.io/main/Labeled%20-%20federal200.csv"
+  url = "https://raw.githubusercontent.com/NSL-Skills/SkillsTool/refs/heads/main/Labeled%20-%20federal200.csv"
   df_userinput = pd.read_csv(open_url(url))
 
   df_userinput = df_userinput.sample(frac=1)
@@ -551,7 +551,7 @@ def getAssessmentOutcomes(CAEChoice):
   global CAE2_outcomes
   
 
-  url = "https://raw.githubusercontent.com/nsl-skills/nsl-skills.github.io/main/Assignments%20for%20NLP%20Tool%20-%20assignments.csv"
+  url = "https://raw.githubusercontent.com/NSL-Skills/SkillsTool/refs/heads/main/Assignments%20for%20NLP%20Tool%20-%20assignments.csv"
   df_assessments = pd.read_csv(open_url(url))
   CAE1_assessments = df_assessments.iloc[0].values.tolist()
 
@@ -561,10 +561,10 @@ def getAssessmentOutcomes(CAEChoice):
   #  outcomes = createOutcomes(classifySkills(skills), skills)
   #  outcomeList.append(outcomes)
 
-  url = "https://raw.githubusercontent.com/nsl-skills/nsl-skills.github.io/main/CAE1_outcomes.txt"
+  url = "https://raw.githubusercontent.com/NSL-Skills/SkillsTool/refs/heads/main/CAE1_outcomes.txt"
   CAE1_outcomes = open_url(url).getvalue()
 
-  url = "https://raw.githubusercontent.com/nsl-skills/nsl-skills.github.io/main/dantu-database-syl.csv"
+  url = "https://raw.githubusercontent.com/NSL-Skills/SkillsTool/refs/heads/main/dantu-database-syl.csv"
   df_assessments = pd.read_csv(open_url(url))
   CAE2_assessments = df_assessments.iloc[0].values.tolist()
   
@@ -574,7 +574,7 @@ def getAssessmentOutcomes(CAEChoice):
   #  outcomes = createOutcomes(classifySkills(skills), skills)
   #  outcomeList.append(outcomes)
 
-  url = "https://raw.githubusercontent.com/nsl-skills/nsl-skills.github.io/main/CAE2_outcomes.txt"
+  url = "https://raw.githubusercontent.com/NSL-Skills/SkillsTool/refs/heads/main/CAE2_outcomes.txt"
   CAE2_outcomes = open_url(url).getvalue()
 
   cae1outcomelist = ast.literal_eval(CAE1_outcomes)
@@ -624,7 +624,7 @@ def buttonExecution(customInput=''):
   df_list = []
 
   if customInput == '':
-    url = "https://raw.githubusercontent.com/nsl-skills/nsl-skills.github.io/main/Labeled%20-%20federal200.csv"
+    url = "https://raw.githubusercontent.com/NSL-Skills/SkillsTool/refs/heads/main/Labeled%20-%20federal200.csv"
     df_userinput = pd.read_csv(open_url(url))
     df_userinput = df_userinput.sample(frac=1)
     df_userinput = df_userinput.head(1)
@@ -818,7 +818,7 @@ print('Training Logistic Regression Model...')
 TRAINTEST_SPLIT = 0.25
 
 # shuffled approach
-mappings = loadMappingData("https://raw.githubusercontent.com/nsl-skills/nsl-skills.github.io/main/KSAT%20Mappings%20for%20NLP%20Model%20-%20Knowledge%20Unit%20Mapping.csv","https://raw.githubusercontent.com/nsl-skills/nsl-skills.github.io/main/KSAT%20Mappings%20for%20NLP%20Model%20-%20Skill%20Unit%20Mapping.csv","https://raw.githubusercontent.com/nsl-skills/nsl-skills.github.io/main/KSAT%20Mappings%20for%20NLP%20Model%20-%20Ability%20Unit%20Mapping.csv","https://raw.githubusercontent.com/nsl-skills/nsl-skills.github.io/main/KSAT%20Mappings%20for%20NLP%20Model%20-%20Task%20Unit%20Mapping.csv")
+mappings = loadMappingData("https://raw.githubusercontent.com/NSL-Skills/SkillsTool/refs/heads/main/KSAT%20Mappings%20for%20NLP%20Model%20-%20Knowledge%20Unit%20Mapping.csv","https://raw.githubusercontent.com/NSL-Skills/SkillsTool/refs/heads/main/KSAT%20Mappings%20for%20NLP%20Model%20-%20Skill%20Unit%20Mapping.csv","https://raw.githubusercontent.com/NSL-Skills/SkillsTool/refs/heads/main/KSAT%20Mappings%20for%20NLP%20Model%20-%20Ability%20Unit%20Mapping.csv","https://raw.githubusercontent.com/NSL-Skills/SkillsTool/refs/heads/main/KSAT%20Mappings%20for%20NLP%20Model%20-%20Task%20Unit%20Mapping.csv")
 df_train, df_test = train_test_split(mappings.sample(frac=1), test_size=(TRAINTEST_SPLIT), random_state=random.randint(0,1000000))
 mappings = ''
 
