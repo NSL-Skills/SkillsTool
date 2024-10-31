@@ -15,11 +15,23 @@ class PyodideHttpMock(MagicMock):
         path = os.path.basename(parsed_url)
         return io.StringIO(open(path, 'r').read())
 
+
+@patch.dict(sys.modules, {'js': MagicMock(currentCAE='CAE-1'), 'pyodide.http': PyodideHttpMock()})
 class TestEndToEnd(unittest.TestCase):
     
-    @patch.dict(sys.modules, {'js': MagicMock(currentCAE='CAE-1'), 'pyodide.http': PyodideHttpMock()})
+    @unittest.skip
     def test_getAssessmentOutcomes(self):
         import end2end
 
-        assert 1 == 1
+        mock_js = sys.modules['js']
+        result = end2end.getAssessmentOutcomes(mock_js.currentCAE)
+
+        assert len(result) > 0
+
+    @patch('end2end.display_to_div', MagicMock())
+    def test_buttonExecution(self):
+        import end2end
+
+        end2end.buttonExecution()
+
 
