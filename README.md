@@ -57,10 +57,16 @@ By scraping website data, identifying relevant keywords, and clustering and clas
    - On macOS/Linux: `source venv/bin/activate`
 
 4. **Install Requirements**:
-   Install the necessary packages listed in `requirements.txt`: `pip install -r requirements.txt`
+   Install the necessary packages listed in `requirements.txt`: 
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 5. **Run Tests**:
-   To run the tests located in the `tests/` folder, use: `python -m unittest discover -s tests`
+   To run the tests located in the `tests/` folder, use: 
+   ```bash
+   python -m unittest discover -s tests
+   ```
 
 
 
