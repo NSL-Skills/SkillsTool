@@ -69,6 +69,36 @@ By scraping website data, identifying relevant keywords, and clustering and clas
    ```
 
 
+## Contributing
+We welcome contributions! If you'd like to help out, please follow these steps:
+
+1. **Fork the repository** to create your own copy.
+2. **Clone your fork** to your local machine.
+3. **Create a new branch** for your changes.
+4. **Make your edits** and commit them with a descriptive message.
+5. **Push your changes** to your fork.
+6. **Open a Pull Request** against the main repository.
+
+Thank you for your interest in contributing!
+
+
+### License
+This project is licensed under the [GPL v3.0 License](https://www.gnu.org/licenses/gpl-3.0.html). See the LICENSE file for details.
+
+
+### Contact
+For inquiries, please contact me at [thomastrebat@my.unt.edu](mailto:thomastrebat@my.unt.edu).
+
+
+### Acknowledgments
+I would like to thank my professors and mentors at the University of North Texas for their invaluable support and guidance throughout this project. Special thanks to my fellow students who collaborated with me and shared their insights. 
+
+I also acknowledge the open-source libraries and tools that made this project possible, including NumPy, Pandas, scikit-learn, Pyodide, YAKE, and FuzzyWuzzy.
+
+Lastly, I appreciate the support from the Department of Defense (DoD) for their grant funding this project.
+
+
+
 
 
 
