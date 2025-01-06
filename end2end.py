@@ -528,6 +528,10 @@ def computeAlignment(inputOutcomes, assessmentOutcomes):
           count += 1
 
           outcomeScores.append([ioName, match])
+          print('Found outcome match:')
+          print('\tOutcome Group:',  ioName)
+          print('\tJob Skills:', ioSkills)
+          print('\tOutcomes:', oSkills)
 
   try:
     result = overallMatch/count
