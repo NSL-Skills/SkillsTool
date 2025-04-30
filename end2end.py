@@ -59,7 +59,6 @@ from sklearn.metrics import classification_report
 from sklearn.cluster import SpectralClustering
 
 from pyodide.http import open_url
-from pyscript import Element
 
 # Install and Import pymongo
 #!pip install pymongo
